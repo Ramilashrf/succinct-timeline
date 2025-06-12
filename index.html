@@ -1,47 +1,109 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Succinct Timeline - Tarihler</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #000000, #FE11C5);
-    color: white;
-    margin: 0;
-    padding: 2rem;
-  }
-  .dates-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    max-width: 100%;
-    flex-wrap: nowrap; /* Yan yana sığdır */
-  }
-  .date-box {
-    background-color: #000000;
-    color: white;
-    border: 2px solid white;
-    border-radius: 8px;
-    padding: 1rem;
-    flex: 1 1 0; /* Eşit genişlikte */
-    min-width: 0; /* Taşmayı önler */
-    box-sizing: border-box;
-    text-align: center;
-  }
-  .date-box .date {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-  .date-box .event {
-    font-size: 1rem;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Succinct Timeline</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #FE11C5 0%, #000000 100%);
+      color: white;
+      margin: 0;
+      padding: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+
+    header img {
+      height: 40px;
+      width: auto;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: white;
+      margin: 0;
+    }
+
+    /* Timeline alt alta liste kısmı */
+    .timeline-item {
+      border-left: 4px solid #FE11C5;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+      background-color: rgba(254, 17, 197, 0.1);
+      border-radius: 6px;
+      color: white;
+    }
+
+    .date {
+      font-weight: bold;
+      color: #FE11C5;
+      font-size: 1.1rem;
+    }
+
+    .event {
+      margin-top: 0.3rem;
+      font-size: 1rem;
+    }
+
+    /* Yan yana 4 tarih kutusu */
+
+    .dates-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 100%;
+      flex-wrap: nowrap;
+      margin-bottom: 3rem;
+    }
+
+    .date-box {
+      background-color: rgba(0, 0, 0, 0.6); /* Siyah şeffaf */
+      color: white;
+      border: 2px solid rgba(0, 0, 0, 0.6); /* Siyah şeffaf çerçeve */
+      border-radius: 8px;
+      padding: 1rem;
+      flex: 1 1 0;
+      min-width: 0;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .date-box .date {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .date-box .event {
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #ffc0e8;
+    }
+  </style>
 </head>
 <body>
 
+  <header>
+    <img src="logo.png" alt="Succinct Logo" />
+    <h1>Succinct Timeline</h1>
+  </header>
+
+  <!-- Yan yana 4 tarih kutusu -->
   <div class="dates-container">
     <div class="date-box">
       <div class="date">✅ 10 Şubat 2025</div>
@@ -60,6 +122,31 @@
       <div class="event">Testnet’te Stage 2’ye geçildi</div>
     </div>
   </div>
+
+  <!-- Alt alta timeline listesi -->
+  <div class="timeline-item">
+    <div class="date">✅ 10 Şubat 2025</div>
+    <div class="event">Testnet live</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="date">✅ 12 Şubat 2025</div>
+    <div class="event">Kısa sürede 15.000 kontenjan doldu, testnete alım kapandı</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="date">🎉 20 Şubat 2025</div>
+    <div class="event">Discord’da ilk rol dağıtımı gerçekleşti</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="date">✅ 13 Mayıs 2025</div>
+    <div class="event">Testnet’te Stage 2’ye geçildi</div>
+  </div>
+
+  <footer>
+    🚀 Succinct Timeline - Haziran 2025
+  </footer>
 
 </body>
 </html>
