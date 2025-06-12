@@ -13,10 +13,20 @@
       margin: 0 auto;
       padding: 2rem;
     }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
+    header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 2rem;
+    }
+    header img {
+      height: 40px; /* Logonun yüksekliği */
+      width: auto;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin: 0;
     }
     .timeline-item {
       border-left: 4px solid #4caf50;
@@ -41,7 +51,11 @@
   </style>
 </head>
 <body>
-  <h1>🗓️ Succinct Timeline</h1>
+
+  <header>
+    <img src="logo.png" alt="Succinct Logo" />
+    <h1>Succinct Timeline</h1>
+  </header>
 
   <div class="timeline-item">
     <div class="date">✅ 10 Şubat 2025</div>
@@ -66,5 +80,6 @@
   <footer>
     🚀 Succinct Timeline - Haziran 2025
   </footer>
+
 </body>
 </html>
